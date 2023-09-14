@@ -11,8 +11,10 @@
   */
   --text-font: 'IBM Plex mono';
   --bg-color: #000028;
+  --menu-button-color: #FF0070;
   --accent-color: #FF0070;
   --subtitle-color: #000028;
+  --subtitle-main-color: #FF0070;
   --text-color: #F1B2CE;
   --title-color: #DB00FF;
   --bg-image: url(../images/cover-image-dark.png);
