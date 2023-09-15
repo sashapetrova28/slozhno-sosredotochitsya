@@ -23,6 +23,9 @@ body {
   height: 100vh; */
   min-height: 768px;
   grid-template-rows: 1fr auto 1fr;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
 }
 
 .decorated-zone::before {
@@ -58,6 +61,7 @@ body {
   line-height: 25px;
   text-transform: uppercase;
   color: var(--accent-color, #FF0070);
+  display: var(--decor-none);
 }
 
 .decorated-element::after {
@@ -70,7 +74,11 @@ body {
   border-radius: 50%;
   background-color: var(--accent-color, #FF0070);
   filter: drop-shadow(0px 0px 4px #FF0070);
-  text-shadow: 0 0 4px var(--accent-color,#FF0070);
+  text-shadow: 0 0 20px var(--accent-color,#FF0070);
+}
+
+.header__theme-menu {
+  padding-left: 20px;
 }
 
 .header__theme-menu-list {
@@ -125,9 +133,9 @@ body {
 .heading__header-container {
   display: grid;
   justify-self: end;
-  align-self: start;
-  padding-inline-end: 20px;
+  align-content: center;
   max-width: 50%;
+  padding-inline-start: 10px;
 }
 
 .heading__header {
@@ -187,7 +195,7 @@ body {
   color: var(--subtitle-color, #000028);
   background-color: var(--accent-color, #FF0070);
   font-size: 18px;
-  line-height: 23.4px;;
+  line-height: 23.4px;
   font-style: normal;
   font-weight: 400;
   margin: 0;
@@ -232,7 +240,7 @@ body {
 
 .link-decor {
   color: var(--text-color, #F1B2CE);
-  text-shadow: 1px 2px 0px #FF0070;
+  text-shadow: 1px 2px 0px var(--accent-color, #FF0070);
   text-decoration: none;
 }
 
@@ -245,7 +253,9 @@ body {
 }
 
 .galery__content {
-  padding-top: 65px;
+  display: grid;
+  gap: 20px;
+  padding-top: 80px;
 }
 
 .galery__container {
@@ -281,11 +291,16 @@ body {
   grid-column: span 2;
 }
 
+.footer {
+  margin-top: 60px;
+  min-height: 768px;
+}
+
 .footer__title {
+  display: grid;
   justify-content: center;
   align-content: center;
   min-height: 768px;
-  padding-top: 60px;
   text-shadow: 2px 2px 0px var(--accent-color,#FF0070);
 }
 
@@ -293,21 +308,25 @@ body {
   position: relative;
 }
 
-@media (width <= 769px) {
+@media (width <= 768px) {
   .header {
     min-height: 1024px;
   }
 
   .header__theme-menu {
-    padding-inline-end: 20px;
-    padding-block-start: 195px;
+    padding-inline-end: 0;
+    padding-block-start: 170px;
   }
 
   .header__theme-menu-list {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 13px;
     align-items: end;
+  }
+
+  .content__container-1 {
+    gap: 20px;
   }
 
   .content__container-2 .paragraph__container {
@@ -316,27 +335,59 @@ body {
     gap: 20px;
   }
 
+  .content__container-3 {
+    gap: 20px;
+  }
+
+  .galery__content {
+    padding-top: 85px;
+  }
+
+  .footer {
+    min-height: 1024px;
+  }
+
+  .footer__title {
+    min-height: 1024px;
+  }
 }
 
 @media (width <= 376px) {
-  .page {
-    margin: 10px;
-  }
-
   .header {
     min-height: 668px;
+    padding: 10px;
   }
 
   .header__theme-menu {
     padding-inline-end: 4px;
-    padding-block-start: 48px;
+    padding-block-start: 65px;
   }
 
   .header__theme-menu-list {
     display: flex;
-    gap: 10px;
+    gap: 13px;
     flex-direction: column;
     align-items: end;
+  }
+
+  .decorated-zone::before {
+    inset-block-start: 10px;
+    inset-inline-end: 10px;
+  }
+  
+  .decorated-zone::after {
+    inset-block-end: 10px;
+    inset-inline-start: 10px;
+  }
+
+  .decorated-element {
+    inset-block-start: 10px;
+    inset-inline-end: 10px;
+  }
+  
+  .decorated-element::after {
+    inset-block-start: 10px;
+    inset-inline-end: 10px;
   }
 
   .title__main {
@@ -345,22 +396,25 @@ body {
   }
 
   .heading__header-container {
-    padding-inline-end: 0;
+    justify-content: center;
+    align-content: center;
+    padding-inline-start: 0;
+    padding-inline-end: 4px;
     max-width: 100%;
   }
 
-  .heading__header {
-    margin: 43px 0 0 0;
-  }
-
   .content {
-    padding: 40px 0 0 0;
+    padding: 40px 10px 0 10px;
   }
 
   .content__container-1 {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
+  }
+
+  .content__container-2 {
+    padding-top: 55px;
   }
 
   .content__container-2 .heading__container {
@@ -370,8 +424,14 @@ body {
   }
 
   .content__container-3 {
+    padding-top: 60px;
     display: flex;
     flex-direction: column;
+    gap: 20px;
+  }
+
+  .galery__content {
+    padding-top: 60px;
     gap: 10px;
   }
 
@@ -379,5 +439,14 @@ body {
     display: flex;
     gap: 10px;
     flex-direction: column;
+  }
+
+  .footer {
+    margin-top: 40px;
+    min-height: 668px;
+  }
+
+  .footer__title {
+    min-height: 668px;
   }
 }

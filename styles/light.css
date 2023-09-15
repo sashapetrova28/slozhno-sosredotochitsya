@@ -25,13 +25,14 @@
   :root {
     --text-font: 'IBM Plex mono';
     --bg-color: #FFF1F7;
-    --nav-color: #FF0070;
+    --nav-color: #353430;
     --accent-color: #FF8DCB;
     --subtitle-color: #353430;
     --subtitle-main-color: #353430;
     --text-color: #353430;
     --title-color: #FFC2E6;
     --bg-image: url(../images/cover-image-light.png);
+    --decor-none: none;
   }
 
   .page {
@@ -41,6 +42,10 @@
 
   .header__theme-menu-button {
     color: var(--nav-color, #353430);
+  }
+
+  .decorated-element {
+    display: var(--decor-none);
   }
 
   .header__theme-menu-button:hover {
@@ -62,16 +67,16 @@
   }
 
   .link-decor {
-    text-shadow: 1px 2px 0px #FF8DCB;
-  }
-
-  .theme_light .decorated-element {
-    display: none;
+    text-shadow: 1px 2px 0px var(--accent-color, #FF8DCB);
   }
 }
 
 @media (width >= 1024px) {
   .theme_light .title__main {
     text-shadow: 4px 4px 0px #FF0070;
+  }
+
+  .theme_light .footer {
+    text-shadow: 2px 2px 0px #FF0070;
   }
 }
