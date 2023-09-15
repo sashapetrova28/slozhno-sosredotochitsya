@@ -23,9 +23,9 @@ body {
   height: 100vh; */
   min-height: 768px;
   grid-template-rows: 1fr auto 1fr;
-  padding-top: 20px;
-  padding-right: 20px;
-  padding-bottom: 20px;
+  padding-block-start: 20px;
+  padding-inline-end: 20px;
+  padding-block-end: 20px;
 }
 
 .decorated-zone::before {
@@ -52,7 +52,7 @@ body {
 
 .decorated-element {
   position: absolute;
-  padding-right: 28px;
+  padding-inline-end: 28px;
   inset-block-start: 20px;
   inset-inline-end: 20px;
   font-size: var(--text-size, 18px);
@@ -78,7 +78,7 @@ body {
 }
 
 .header__theme-menu {
-  padding-left: 20px;
+  padding-inline-start: 20px;
 }
 
 .header__theme-menu-list {
@@ -107,7 +107,7 @@ body {
 
 .header__theme-menu-button:focus {
   outline: 0px solid transparent;
-  border-bottom: 1px solid var(--nav-color,#FF0070);
+  border-block-end: 1px solid var(--nav-color,#FF0070);
 }
 
 .header__theme-menu-button_active {
@@ -120,7 +120,7 @@ body {
   display: grid;
   align-items: stretch;
   justify-content: start;
-  padding-left: 0;
+  padding-inline-start: 0;
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   font-family: var(--text-font, IBM Plex Mono);
   font-style: normal;
@@ -207,7 +207,7 @@ body {
 }
 
 .content__container-2 {
-  padding-top: 80px;
+  padding-block-start: 80px;
   display: grid;
   gap: 20px;
 }
@@ -228,7 +228,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 10px;
-  padding-top: 80px;
+  padding-block-start: 80px;
 }
 
 .heading-weight-l {
@@ -246,7 +246,7 @@ body {
 }
 
 .link-decor:hover {
-  border-bottom: 1px solid var(--text-color, #F1B2CE);
+  border-block-end: 1px solid var(--text-color, #F1B2CE);
 }
 
 .link-decor:focus {
@@ -256,7 +256,7 @@ body {
 .galery__content {
   display: grid;
   gap: 20px;
-  padding-top: 80px;
+  padding-block-start: 80px;
 }
 
 .galery__container {
@@ -293,7 +293,7 @@ body {
 }
 
 .footer {
-  margin-top: 60px;
+  margin-block-start: 60px;
   min-height: 768px;
 }
 
@@ -341,7 +341,7 @@ body {
   }
 
   .galery__content {
-    padding-top: 85px;
+    padding-block-start: 85px;
   }
 
   .footer {
@@ -415,7 +415,7 @@ body {
   }
 
   .content__container-2 {
-    padding-top: 55px;
+    padding-top: 50px;
   }
 
   .content__container-2 .heading__container {
@@ -425,14 +425,14 @@ body {
   }
 
   .content__container-3 {
-    padding-top: 60px;
+    padding-block-start: 50px;
     display: flex;
     flex-direction: column;
     gap: 20px;
   }
 
   .galery__content {
-    padding-top: 60px;
+    padding-block-start: 50px;
     gap: 10px;
   }
 
@@ -443,7 +443,7 @@ body {
   }
 
   .footer {
-    margin-top: 40px;
+    margin-block-start: 40px;
     min-height: 668px;
   }
 
