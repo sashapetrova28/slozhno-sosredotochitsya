@@ -4,7 +4,7 @@
 */
 
 :root {
-  --text-font: 'IBM Plex mono';
+  --text-font: 'IBM Plex mono', 'serif';
   --bg-color: #000028;
   --nav-color: #FF0070;
   --accent-color: #FF0070;

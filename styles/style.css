@@ -1,7 +1,4 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-body {
-  margin: 0 auto;
-}
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
@@ -19,8 +16,7 @@ body {
 .header {
   display: grid;
   position: relative;
-  /* width: 100%;
-  height: 100vh; */
+  height: 100vh;
   min-height: 768px;
   grid-template-rows: 1fr auto 1fr;
   padding-block-start: 20px;
@@ -250,6 +246,10 @@ body {
 }
 
 .link-decor:focus {
+  outline: none;
+}
+
+.link-decor:focus-visible {
   outline: 1px solid var(--text-color, #F1B2CE);
 }
 
@@ -302,6 +302,7 @@ body {
   justify-content: center;
   align-content: center;
   min-height: 768px;
+  height: 100vh;
   text-shadow: 2px 2px 0px var(--accent-color,#FF0070);
 }
 
@@ -312,6 +313,7 @@ body {
 @media (width <= 768px) {
   .header {
     min-height: 1024px;
+    block-size: 100vh;
   }
 
   .header__theme-menu {
@@ -350,6 +352,7 @@ body {
 
   .footer__title {
     min-height: 1024px;
+    block-size: 100vh;
   }
 }
 
@@ -437,9 +440,29 @@ body {
   }
 
   .galery__container {
-    display: flex;
+    display: grid;
     gap: 10px;
-    flex-direction: column;
+    grid-template-columns: 1fr;
+  }
+
+  .img:nth-child(1) {
+    grid-column: 1;
+  }
+  
+  .img:nth-child(2) {
+    grid-column: 1;
+  }
+  
+  .img:nth-child(3) {
+    grid-column: 1;
+  }
+  
+  .img:nth-child(4) {
+    grid-column: 1;
+  }
+  
+  .img:nth-child(5) {
+    grid-column: 1;
   }
 
   .footer {
@@ -449,5 +472,28 @@ body {
 
   .footer__title {
     min-height: 668px;
+  }
+}
+
+@media (width >= 379px) and (width <= 409px) {
+  .heading__header-container {
+    max-width: 60%;
+  }
+
+  .content {
+    padding: 40px 10px 0 10px;
+  }
+
+  .content__container-1 {
+    gap: 10px;
+  }
+
+  .content__container-2 {
+    gap: 10px;
+  }
+
+  .content__container-3 {
+    gap: 10px;
+    width: min-content;
   }
 }
